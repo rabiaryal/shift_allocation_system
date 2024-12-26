@@ -22,42 +22,16 @@ create table employee(
 select * from employee;
 insert into employee values
 	(1, 'shashank', 3,  'cashier', 'sadjaksnd'),
-    (2, 'bisswa', 4, 'sweeper', 'sadjaksnd'),
-    (3, 'rabi', 7, 'janitor', 'sadjaksnd')
-create database shift_allocation;
-use shift_allocation;
-create table hr_manager(
-	id integer primary key,
-    pass varchar(50),
-    name varchar(50)
-    );
-create table shift(
-	shift_id integer primary key,
-    shift_duration integer,
-    shift_timing varchar(50),
-    shift_day varchar(50),
-    shift_priority integer
-    );
-create table employee(
-	e_id integer primary key,
-    e_name varchar(50),
-    no_of_hours_worked integer,
-    designation varchar(50),
-    e_email varchar(100)
-    );
-select * from employee;
-insert into employee values
-	(1, 'shashank', 3,  'cashier', 'sadjaksnd'),
-    (2, 'bisswa', 4, 'sweeper', 'sadjaksnd'),
-    (3, 'rabi', 7, 'janitor', 'sadjaksnd'),
-    (4, 'Bob Williams', 20, 'Clerk', 'bob.w@google.com'),
+	(2, 'bisswa', 4, 'sweeper', 'sadjaksnd'),
+	(3, 'rabi', 7, 'janitor', 'sadjaksnd'),
+	(4, 'Bob Williams', 20, 'Clerk', 'bob.w@google.com'),
 	(5, 'Sarah Lee', 45, 'Supervisor', 'sarah.lee@google.com'),
 	(6, 'Tom Davis', 38, 'Technician', 'tom.d@google.com'),
 	(7, 'Emily Clark', 50, 'Senior Engineer', 'emily.c@google.com'),
 	(8, 'Michael Brown', 25, 'Junior Engineer', 'michael.b@google.com'),
 	(9, 'Olivia Taylor', 32, 'Support Staff', 'olivia.t@google.com'),
 	(10, 'Daniel Harris', 42, 'Project Manager', 'daniel.h@google.com')
-    (11, 'Kevin Brooks', 36, 'Software Engineer', 'kevin.brooks@google.com'),
+	(11, 'Kevin Brooks', 36, 'Software Engineer', 'kevin.brooks@google.com'),
     (12, 'Laura Hall', 29, 'Marketing Specialist', 'laura.hall@google.com'),
     (13, 'Michael Evans', 50, 'Technical Lead', 'michael.evans@google.com'),
     (14, 'Natalie Reed', 28, 'Software Engineer', 'natalie.reed@google.com'),
