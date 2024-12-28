@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Lock, Mail } from 'lucide-react';
-import AuthLayout from './shared/AuthLayout';
-import InputField from './shared/InputField';
-import Button from './shared/Button';
+import AuthLayout from '../shared/AuthLayout';
+import InputField from '../shared/InputField';
+import Button from '../shared/Button';
 
 const LoginPage = ({ onSwitchToSignup }: { onSwitchToSignup: () => void }) => {
   const [email, setEmail] = useState('');
