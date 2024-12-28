@@ -89,7 +89,7 @@ insert into employee values
 (66, 'Nathan Diaz', 50, 'Network Administrator', 'nathan.diaz@google.com'),
 (67, 'Olivia Foster', 28, 'Data Scientist', 'olivia.foster@google.com'),
 (68, 'Paul Wright', 46, 'Project Manager', 'paul.wright@google.com'),
-(69, 'Quincy Lee', 47, 'Software Engineer', 'quincy.lee@google.com"),
+(69, 'Quincy Lee', 47, 'Software Engineer', 'quincy.lee@google.com'),
 (70, 'Rita Young', 44, 'QA Engineer', 'rita.young@google.com');
 
 INSERT INTO shift VALUES 
