@@ -1,15 +1,19 @@
+
 import React, { useState } from 'react';
-import LoginPage from './components/LoginPage';
-import SignupPage from './components/SignupPage';
 
-function App() {
-  const [isLogin, setIsLogin] = useState(true);
+import { BrowserRouter } from 'react-router-dom';
+import AppRoutes from './routes/approutes';
 
-  return isLogin ? (
-    <LoginPage onSwitchToSignup={() => setIsLogin(false)} />
-  ) : (
-    <SignupPage onSwitchToLogin={() => setIsLogin(true)} />
+
+const App: React.FC = () => {
+  return (
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
   );
-}
+};
+
+
+
 
 export default App;
