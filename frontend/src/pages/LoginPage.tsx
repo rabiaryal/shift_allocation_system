@@ -52,7 +52,7 @@ const LoginPage = () => {
 
       <div className="text-center text-sm">
         <span className="text-gray-500">Don't have an account?</span>{' '}
-        <Button variant="link" onClick={() => navigate('/signup')}>
+        <Button variant="secondary" onClick={() => navigate('/signup')}>
           Sign up
         </Button>
       </div>

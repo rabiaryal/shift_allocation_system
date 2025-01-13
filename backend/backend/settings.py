@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+     
+    
 ]
 
 MIDDLEWARE = [
@@ -77,8 +79,13 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        'USER': 'root',
+        'PASSWORD': 'sagarmatha@28',
+        'HOST': 'localhost',  
+        'PORT': '3306',       
+        },
     }
-}
+
 
 
 # Password validation
@@ -115,7 +122,19 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+# settings.py
+
+# URL to use when referring to static files (relative to the root of your site)
+STATIC_URL = '/static/'
+
+# Directory where static files are collected and served from
+STATICFILES_DIRS = [
+    BASE_DIR / "frontend" / "dist",  # Path to the dist folder from the Vite build
+]
+
+# Directory to collect static files when running collectstatic
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

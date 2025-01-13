@@ -4,7 +4,7 @@ interface ButtonProps {
   type?: 'button' | 'submit';
   children: React.ReactNode;
   fullWidth?: boolean;
-  variant?: 'primary' | 'link';
+  variant?: 'primary' | 'secondary' | 'success';
   onClick?: () => void;
 }
 
@@ -15,10 +15,11 @@ const Button = ({
   variant = 'primary',
   onClick
 }: ButtonProps) => {
-  const baseStyles = "font-medium transition duration-150";
+  const baseStyles = "font-medium transition duration-150 rounded-md px-4 py-2 text-white";
   const variants = {
-    primary: "py-2.5 px-4 border border-transparent rounded-lg shadow-sm text-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500",
-    link: "text-sm text-indigo-600 hover:text-indigo-500"
+    primary: "bg-blue-500 hover:bg-blue-600",
+    secondary: "bg-gray-500 hover:bg-gray-600",
+    success: "bg-green-500 hover:bg-green-600",
   };
 
   return (
