@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Shift Swap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.x/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    #swapButton {
+      display: none; /* Initially hidden */
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Shift Swap Portal</h1>
+    <form id="swapForm">
+      <div class="mb-3">
+        <label for="employee1Id" class="form-label">Employee 1 ID</label>
+        <input type="text" class="form-control" id="employee1Id" placeholder="Enter Employee 1 ID" required>
+      </div>
+      <div class="mb-3">
+        <label for="shiftDay" class="form-label">Shift Day of Employee 1</label>
+        <input type="date" class="form-control" id="shiftDay" required>
+      </div>
+      <div class="mb-3">
+        <label for="shiftId1" class="form-label">Employee 1 Shift ID</label>
+        <input type="text" class="form-control" id="shiftId1" placeholder="Enter Employee 1 Shift ID" required>
+      </div>
+      <div class="mb-3">
+        <label for="employee2Id" class="form-label">Employee 2 ID</label>
+        <input type="text" class="form-control" id="employee2Id" placeholder="Enter Employee 2 ID" required>
+      </div>
+      <div class="mb-3">
+        <label for="shiftDay" class="form-label">Shift Day of Employee 2</label>
+        <input type="date" class="form-control" id="shiftDay" required>
+      </div>
+     
+      <div class="mb-3">
+        <label for="shiftId2" class="form-label">Employee 2 Shift ID</label>
+        <input type="text" class="form-control" id="shiftId2" placeholder="Enter Employee 2 Shift ID" required>
+      </div>
+      <button type="button" class="btn btn-primary w-100 mb-3" onclick="checkSwap()">Check Swap Availability</button>
+      <div id="result" class="text-center mb-3"></div>
+      <button type="button" class="btn btn-success w-100" id="swapButton" onclick="swapShifts()">Swap Shifts</button>
+    </form>
+  </div>
+
+  <script>
+    // Simulate swap availability check logic
+    function checkSwap() {
+      const employee1Id = document.getElementById('employee1Id').value;
+      const employee2Id = document.getElementById('employee2Id').value;
+      const shiftId1 = document.getElementById('shiftId1').value;
+      const shiftId2 = document.getElementById('shiftId2').value;
+
+      const resultDiv = document.getElementById('result');
+      const swapButton = document.getElementById('swapButton');
+
+      // Example validation logic
+      if (employee1Id && employee2Id && shiftId1 !== shiftId2) {
+        resultDiv.textContent = "Valid for Swap";
+        resultDiv.className = "text-success";
+        swapButton.style.display = "block"; // Show the Swap button
+      } else {
+        resultDiv.textContent = "Not Valid for Swap";
+        resultDiv.className = "text-danger";
+        swapButton.style.display = "none"; // Hide the Swap button
+      }
+    }
+
+    // Simulate shift swap action
+    function swapShifts() {
+      alert("Shifts swapped successfully!");
+      // Logic to update backend or database can be added here.
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.x/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
